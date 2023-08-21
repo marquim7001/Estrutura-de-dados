@@ -1,14 +1,13 @@
 #include <stdio.h>
+#include <stdlib.h>
 
-int main()
+int main(int argc, char *argv[])
 {
     int n, d, Primo;		
+    n= atoi(argv[1]);
 
     d = 2;
     Primo = 1;
-
-    printf("Forneca um numero inteiro: ");
-    scanf("%d", &n);
 
     if (n <= 1)
 	Primo = 0;
