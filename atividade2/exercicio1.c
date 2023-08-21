@@ -1,15 +1,18 @@
-#include<stdio.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 int main(){
-    int array[4] = {2, 5, 8,9};
-
-    int i = 0, soma = 0;
-
-    for (i = 0; i < sizeof(array) / sizeof(array[0]); i++){
-        soma += array[i];
-    }
-
-    printf(" %d", soma);
-    
-    return 0;
+	int i[4], soma=0, conta;
+	
+	for(conta=0; conta<4; conta++){
+		scanf("%d", &i[conta]);		
+	}
+	
+	for(conta=0;conta<4; conta++){
+		soma= soma+ i[conta];
+		
+	}
+	 printf("O somatorio e = %d\n", soma);
+	
+	return 0;
 }
