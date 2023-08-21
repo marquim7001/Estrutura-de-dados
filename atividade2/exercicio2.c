@@ -2,22 +2,28 @@
 
 int main()
 {
-    int array[4] = {2, 5, 8, 9};
+    int valor[4];
+    int i;
+		for(i=0; i<4; i++){
+		scanf("%d", &valor[i]);
+	}
+	
+    int  maior=valor[0];
+	int menor=valor[0];
+	
+		
+	for( i = 1; i<4; i++){
+		if (valor[i] > maior){
+			maior = valor[i];		
+		}
+		
+		if(valor[i] < menor){
+			menor = valor[i];
+		}	
+	}
+		
+		printf(" maior = %d \n", maior );
+			printf("o menor valor do array[%d]\n", menor );
 
-    int i = 0, menor = array[0], maior = array[0];
-
-    for (i = 1; i < 4; i++){
-
-        if (array[i] < menor){
-            menor = array[i];
-        }
-
-        if (array[i] > maior){
-            maior = array[i];
-        }
-    }
-
-    printf("%d %d", menor, maior);
-    
     return 0;
 }
