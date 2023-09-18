@@ -25,7 +25,7 @@ int main(int argc, char *argv[]) {
         return 1;
     }
 
-    char **palavras = NULL;
+    char **palavras = NULL;  
     int numPalavras = 0;
     char palavra[100];
 
