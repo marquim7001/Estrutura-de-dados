@@ -3,11 +3,10 @@
 #include "pilha.h"
 
 Pilha* pilha(){
-    Pilha p;
+    Pilha* p = malloc(sizeof(pilha));
     p.topo = NULL;
     p.quantidade =0;
-    Pilha* p1 = &p;
-    return &p1;
+    return p;
 
 }
 
