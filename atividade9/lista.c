@@ -20,22 +20,25 @@ void lista_inserir_no(No* L, No* no){
     }
 }
 
-void lista_imprimir(No* L){
-    if(L != NULL){
-        printf("%c ", L->valor);
-        lista_imprimir(L->proximo_no);
+
+void lista_inserir_no_ordenado(No** L, No* no){
+    if(*L != NULL){
+        if((*L)->valor >= no->valor){
+            no->proximo_no = *L;
+            *L = no;
+        } else if ((*L)->proximo_no != NULL) {
+            lista_inserir_no_ordenado(&(*L)->proximo_no, no);
+        } else {
+            (*L)->proximo_no = no;
+        }
     }
 }
 
-void lista_inserir_no_ordenado(No* L, No* no) {
-    if (*L == NULL) {
-        if((*L)-> valor >= no-> valor){
-        no->proximo_no = NULL;
-        *L = no;
-        } else if ((*L) -> proximo_no != NULL){
-            lista_inserir_no_ordenado(&(*L)-> proximo_no, no);
-        }else{
-            (*L)-> proximo_no=no;
-        }
-    }   
+void lista_imprimir(No* L){
+    if(L != NULL){
+        printf("%f ", L->valor);
+        lista_imprimir(L->proximo_no);
+    } else {
+        printf("ERRO");
+    }
 }
